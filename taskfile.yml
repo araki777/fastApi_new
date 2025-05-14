@@ -1,0 +1,12 @@
+version: 3
+
+tasks:
+  run:
+    cmds:
+      - poetry run uvicorn api.main:app --host 0.0.0.0 --reload
+  db-up:
+    cmds:
+      - docker compose up -d
+  db-down:
+    cmds:
+      - docker compose down
